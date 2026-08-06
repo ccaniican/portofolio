@@ -73,9 +73,21 @@ strong {
   inset: 0;
   z-index: -2;
   background:
-    radial-gradient(ellipse 80% 60% at 10% 20%, rgba(99, 102, 241, 0.15), transparent),
-    radial-gradient(ellipse 60% 50% at 90% 10%, rgba(34, 211, 238, 0.1), transparent),
-    radial-gradient(ellipse 50% 40% at 50% 80%, rgba(244, 114, 182, 0.08), transparent);
+    radial-gradient(
+      ellipse 80% 60% at 10% 20%,
+      rgba(99, 102, 241, 0.15),
+      transparent
+    ),
+    radial-gradient(
+      ellipse 60% 50% at 90% 10%,
+      rgba(34, 211, 238, 0.1),
+      transparent
+    ),
+    radial-gradient(
+      ellipse 50% 40% at 50% 80%,
+      rgba(244, 114, 182, 0.08),
+      transparent
+    );
 }
 
 .bg-grid {
@@ -258,9 +270,15 @@ strong {
 }
 
 @keyframes pulse {
-  0% { box-shadow: 0 0 0 0 rgba(74, 222, 128, 0.5); }
-  70% { box-shadow: 0 0 0 8px rgba(74, 222, 128, 0); }
-  100% { box-shadow: 0 0 0 0 rgba(74, 222, 128, 0); }
+  0% {
+    box-shadow: 0 0 0 0 rgba(74, 222, 128, 0.5);
+  }
+  70% {
+    box-shadow: 0 0 0 8px rgba(74, 222, 128, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(74, 222, 128, 0);
+  }
 }
 
 .hero-greeting {
@@ -300,7 +318,9 @@ strong {
 }
 
 @keyframes blink {
-  50% { opacity: 0; }
+  50% {
+    opacity: 0;
+  }
 }
 
 .hero-desc {
@@ -376,8 +396,15 @@ strong {
 }
 
 @keyframes glowPulse {
-  0%, 100% { opacity: 0.2; transform: scale(1); }
-  50% { opacity: 0.35; transform: scale(1.05); }
+  0%,
+  100% {
+    opacity: 0.2;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.35;
+    transform: scale(1.05);
+  }
 }
 
 .profile-card {
@@ -468,8 +495,13 @@ strong {
 }
 
 @keyframes float {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-12px); }
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-12px);
+  }
 }
 
 /* ===== SECTIONS ===== */
@@ -588,12 +620,30 @@ strong {
   font-size: 0.875rem;
 }
 
-.skill-icon.html { background: rgba(239, 68, 68, 0.15); color: #f87171; }
-.skill-icon.css { background: rgba(59, 130, 246, 0.15); color: #60a5fa; }
-.skill-icon.js { background: rgba(234, 179, 8, 0.15); color: #facc15; }
-.skill-icon.figma { background: rgba(168, 85, 247, 0.15); color: #c084fc; }
-.skill-icon.react { background: rgba(34, 211, 238, 0.15); color: #22d3ee; }
-.skill-icon.git { background: rgba(249, 115, 22, 0.15); color: #fb923c; }
+.skill-icon.html {
+  background: rgba(239, 68, 68, 0.15);
+  color: #f87171;
+}
+.skill-icon.css {
+  background: rgba(59, 130, 246, 0.15);
+  color: #60a5fa;
+}
+.skill-icon.js {
+  background: rgba(234, 179, 8, 0.15);
+  color: #facc15;
+}
+.skill-icon.figma {
+  background: rgba(168, 85, 247, 0.15);
+  color: #c084fc;
+}
+.skill-icon.react {
+  background: rgba(34, 211, 238, 0.15);
+  color: #22d3ee;
+}
+.skill-icon.git {
+  background: rgba(249, 115, 22, 0.15);
+  color: #fb923c;
+}
 
 .skill-card h3 {
   font-family: var(--font-display);
@@ -868,7 +918,9 @@ strong {
 .reveal {
   opacity: 0;
   transform: translateY(30px);
-  transition: opacity 0.7s ease, transform 0.7s ease;
+  transition:
+    opacity 0.7s ease,
+    transform 0.7s ease;
 }
 
 .reveal.visible {
@@ -911,8 +963,12 @@ strong {
     height: 260px;
   }
 
-  .float-card-1 { left: 0; }
-  .float-card-2 { right: 0; }
+  .float-card-1 {
+    left: 0;
+  }
+  .float-card-2 {
+    right: 0;
+  }
 
   .about-grid {
     grid-template-columns: 1fr;
