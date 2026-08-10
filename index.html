@@ -45,6 +45,7 @@
           <li><a href="#about">About</a></li>
           <li><a href="#skills">Skills</a></li>
           <li><a href="#project">Projects</a></li>
+          <li><a href="#certificates">Certificates</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
@@ -380,14 +381,14 @@
                 </svg>
               </div>
               <img
-                src="assets/img/project2.png"
-                alt="Company Profile"
+                src="assets/img/inventory.png"
+                alt="Inventory Management Website"
                 onload="this.previousElementSibling.style.display = 'none'"
                 onerror="this.style.display = 'none'"
               />
               <div class="project-overlay">
                 <a
-                  href="https://github.com/ccaniican/canneshop-lp.git"
+                  href="https://github.com/ccaniican/inventory-project.git"
                   target="_blank"
                   class="project-link"
                   aria-label="View project"
@@ -415,11 +416,136 @@
                 <span>CSS</span>
                 <span>JavaScript</span>
               </div>
-              <h3>Company Profile</h3>
+              <h3>Inventory Management Website</h3>
               <p>
-                Website profil perusahaan modern dengan desain responsif dan
-                animasi interaktif.
+                Website manajemen stok barang untuk mencatat, memantau, serta
+                mengelola persediaan secara efisien.
               </p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- CERTIFICATES -->
+      <section id="certificates" class="section container">
+        <div class="section-header reveal">
+          <span class="section-tag">Certificates</span>
+          <h2>Sertifikat & Lisensi</h2>
+        </div>
+
+        <div class="certificates-grid">
+          <!-- Card 1: BNSP -->
+          <article
+            class="cert-card reveal"
+            data-cert-title="BNSP - Program Analis"
+            data-cert-issuer="Badan Nasional Sertifikasi Profesi"
+            data-cert-img="assets/img/foto.png"
+            data-cert-date="15 September 2026"
+          >
+            <div class="cert-image-wrapper">
+              <img
+                src="assets/img/foto-bnsp.png"
+                alt="BNSP - Program Analis"
+                onerror="this.src = 'assets/img/cert-bnsp.svg'"
+              />
+                <svg
+                  width="18"
+                  height="18"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path
+                    d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"
+                  ></path>
+                </svg>
+              </a>
+            </div>
+            <div class="cert-body">
+              <h3>BNSP - Program Analis</h3>
+              <p>Badan Nasional Sertifikasi Profesi</p>
+            </div>
+          </article>
+
+          <article
+            class="cert-card reveal reveal-delay"
+            data-cert-title="TOEFL"
+            data-cert-issuer="Universias Bina Sarana Informatika"
+            data-cert-img="assets/img/foto-toefl.png"
+            data-cert-date="04 Oktober 2026"
+          >
+            <div class="cert-image-wrapper">
+              <img
+                src="assets/img/foto-toefl.png"
+                alt="Universitas Bina Sarana Informatika"
+                onerror="
+                  this.onerror = null;
+                  this.src = 'assets/img/foto-toefl.png';
+                "
+              />
+              
+                <svg
+                  width="18"
+                  height="18"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path
+                    d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"
+                  ></path>
+                </svg>
+              </a>
+            </div>
+            <div class="cert-body">
+              <h3>TOEFL</h3>
+              <p>Universitas Bina Sarana Informatika</p>
+            </div>
+          </article>
+
+          <!-- Card 4: Cisco CCNA -->
+          <article
+            class="cert-card reveal"
+            data-cert-title="Cisco Certified Network Associate (CCNA)"
+            data-cert-issuer="Cisco Networking Academy"
+            data-cert-img="assets/img/foto-cisco.pdf"
+            data-cert-date="14 Agustus 2026"
+          >
+            <div class="cert-image-wrapper">
+              <img
+                src="assets/img/foto-cisco.png"
+                alt="Cisco Certified Network Associate (CCNA)"
+                onerror="
+                  this.onerror = null;
+                  this.src = 'assets/img/foto-cisco.png';
+                "
+              />
+                <svg
+                  width="18"
+                  height="18"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+                  <path
+                    d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"
+                  ></path>
+                </svg>
+              </a>
+            </div>
+            <div class="cert-body">
+              <h3>Cisco Certified Network Associate (CCNA)</h3>
+              <p>Cisco Networking Academy</p>
             </div>
           </article>
         </div>
@@ -437,7 +563,7 @@
             </p>
 
             <div class="social-links">
-              <a href="#" class="social-btn" aria-label="GitHub">
+              <a href="https://github.com/ccaniican" target="_blank" class="social-btn" aria-label="GitHub">
                 <svg
                   width="20"
                   height="20"
@@ -540,6 +666,82 @@
         </a>
       </div>
     </footer>
+
+    <!-- CERTIFICATE MODAL LIGHTBOX -->
+    <div
+      class="cert-modal"
+      id="certModal"
+      aria-hidden="true"
+      role="dialog"
+      aria-labelledby="modalCertTitle"
+    >
+      <div class="cert-modal-overlay" id="certModalOverlay"></div>
+      <div class="cert-modal-container">
+        <button
+          class="cert-modal-close"
+          id="certModalClose"
+          aria-label="Close modal"
+        >
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+        <div class="cert-modal-body">
+          <div class="cert-modal-img-wrap">
+            <a
+              href="#"
+              id="modalCertImgLink"
+              target="_blank"
+              title="Klik untuk melihat gambar ukuran penuh"
+            >
+              <img src="" alt="" id="modalCertImg" />
+            </a>
+          </div>
+          <div class="cert-modal-info">
+            <div class="cert-modal-text">
+              <h3 id="modalCertTitle"></h3>
+              <p class="cert-modal-issuer" id="modalCertIssuer"></p>
+              <p class="cert-modal-date" id="modalCertDate"></p>
+            </div>
+            <a
+              href="#"
+              id="modalCertBtn"
+              target="_blank"
+              class="btn btn-primary btn-cert-view"
+            >
+              <svg
+                width="18"
+                height="18"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path
+                  d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
+                ></path>
+                <polyline points="15 3 21 3 21 9"></polyline>
+                <line x1="10" y1="14" x2="21" y2="3"></line>
+              </svg>
+              Buka Gambar Penuh
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
     <script src="script.js"></script>
   </body>

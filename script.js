@@ -151,3 +151,92 @@ document.getElementById("contactForm").addEventListener("submit", function (e) {
       },
     );
 });
+
+// Certificate Modal Lightbox
+function initCertModal() {
+  const certModal = document.getElementById("certModal");
+  const modalCertImg = document.getElementById("modalCertImg");
+  const modalCertImgLink = document.getElementById("modalCertImgLink");
+  const modalCertTitle = document.getElementById("modalCertTitle");
+  const modalCertIssuer = document.getElementById("modalCertIssuer");
+  const modalCertDate = document.getElementById("modalCertDate");
+  const modalCertBtn = document.getElementById("modalCertBtn");
+  const certModalClose = document.getElementById("certModalClose");
+  const certModalOverlay = document.getElementById("certModalOverlay");
+
+  document.addEventListener("click", (e) => {
+    const card = e.target.closest(".cert-card");
+    if (!card) return;
+
+    // Prevent default navigation when clicking card/badge to open modal
+    e.preventDefault();
+
+    const title = card.dataset.certTitle || card.querySelector("h3")?.textContent || "";
+    const issuer = card.dataset.certIssuer || card.querySelector("p")?.textContent || "";
+    const cardImg = card.querySelector("img");
+    const fallbackSvg = card.dataset.certImg || "";
+    
+    let imgSrc = (cardImg && cardImg.currentSrc) ? cardImg.currentSrc : (cardImg && cardImg.src ? cardImg.src : fallbackSvg);
+
+    if (modalCertTitle) modalCertTitle.textContent = title;
+    if (modalCertIssuer) modalCertIssuer.textContent = issuer;
+    if (modalCertDate) modalCertDate.textContent = card.dataset.certDate ? `Diterbitkan: ${card.dataset.certDate}` : "";
+    
+    if (modalCertImg) {
+      modalCertImg.src = imgSrc;
+      modalCertImg.alt = title;
+      modalCertImg.onerror = function() {
+        if (fallbackSvg && this.src !== fallbackSvg) {
+          this.src = fallbackSvg;
+          if (modalCertImgLink) modalCertImgLink.href = fallbackSvg;
+          if (modalCertBtn) modalCertBtn.href = fallbackSvg;
+        }
+      };
+    }
+
+    if (modalCertImgLink) modalCertImgLink.href = imgSrc;
+    if (modalCertBtn) modalCertBtn.href = imgSrc;
+
+    if (certModal) {
+      certModal.classList.add("active");
+      certModal.setAttribute("aria-hidden", "false");
+      document.body.style.overflow = "hidden";
+    }
+  });
+
+  function closeCertModal() {
+    if (!certModal) return;
+    certModal.classList.remove("active");
+    certModal.setAttribute("aria-hidden", "true");
+    document.body.style.overflow = "";
+  }
+
+  if (certModalClose) {
+    certModalClose.addEventListener("click", (e) => {
+      e.stopPropagation();
+      closeCertModal();
+    });
+  }
+  
+  if (certModalOverlay) {
+    certModalOverlay.addEventListener("click", (e) => {
+      e.stopPropagation();
+      closeCertModal();
+    });
+  }
+
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && certModal && certModal.classList.contains("active")) {
+      closeCertModal();
+    }
+  });
+}
+
+if (document.readyState === "loading") {
+  document.addEventListener("DOMContentLoaded", initCertModal);
+} else {
+  initCertModal();
+}
+
+
+
