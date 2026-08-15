@@ -615,9 +615,18 @@ strong {
   align-items: center;
   justify-content: center;
   border-radius: 12px;
-  font-family: var(--font-display);
-  font-weight: 800;
-  font-size: 0.875rem;
+  font-size: 1.625rem;
+  transition: var(--transition);
+}
+
+.skill-icon i,
+.skill-icon svg {
+  transition: transform 0.3s ease;
+}
+
+.skill-card:hover .skill-icon i,
+.skill-card:hover .skill-icon svg {
+  transform: scale(1.2);
 }
 
 .skill-icon.html {
@@ -632,17 +641,33 @@ strong {
   background: rgba(234, 179, 8, 0.15);
   color: #facc15;
 }
-.skill-icon.figma {
-  background: rgba(168, 85, 247, 0.15);
-  color: #c084fc;
+.skill-icon.tailwind {
+  background: rgba(56, 189, 248, 0.15);
+  color: #38bdf8;
 }
 .skill-icon.react {
   background: rgba(34, 211, 238, 0.15);
   color: #22d3ee;
 }
+.skill-icon.nextjs {
+  background: rgba(255, 255, 255, 0.12);
+  color: #ffffff;
+}
+.skill-icon.laravel {
+  background: rgba(244, 63, 94, 0.15) !important;
+  color: #ff2d20;
+}
+.skill-icon.codeigniter {
+  background: rgba(249, 115, 22, 0.15) !important;
+  color: #ee4323;
+}
 .skill-icon.git {
   background: rgba(249, 115, 22, 0.15);
   color: #fb923c;
+}
+.skill-icon.figma {
+  background: rgba(168, 85, 247, 0.15);
+  color: #c084fc;
 }
 
 .skill-card h3 {
